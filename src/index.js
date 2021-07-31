@@ -1,24 +1,24 @@
 import './css/styles.css';
 import axios from 'axios';
 import { refs } from './js/getRefs';
-import NewsApiService from './js/service';
+import NewApiService from './js/service';
 import Notiflix from 'notiflix';
 import cards from './templates/cards.hbs';
 import SimpleLightbox from "simplelightbox";
 
 
 const gallery = new SimpleLightbox('.photo-card a');
-const newsApiService = new NewsApiService();
+const newsApiService = new NewApiService();
 
 
 refs.searchForm.addEventListener('submit', onSearch)
 refs.loadMoreBtn.addEventListener('click', onLoad)
 refs.loadMoreBtn.classList.add('is-hidden');
 
-async function onSearch(e){
-    e.preventDefault();
+async function onSearch(evt){
+    evt.preventDefault();
     newsApiService.resetPage();
-    newsApiService.query = e.currentTarget.elements.searchQuery.value;
+    newsApiService.query = evt.currentTarget.elements.searchQuery.value;
     
     // refs.loadMoreBtn.disabled = true;
     // refs.loadMoreBtn.classList.remove('is-hidden');

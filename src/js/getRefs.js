@@ -1,7 +1,8 @@
 export const getRefs = () =>  {
     return {
-    countryInfo: document.querySelector('.country-info'),
-    countryList: document.querySelector('.country-list'),
-    searchCountry: document.querySelector('#search-box'),
+      searchForm: document.querySelector('.search-form'),
+      galleryCards: document.querySelector('.gallery'),
+      searchBtn: document.querySelector('.searchBtn'),
+      loadMoreBtn: document.querySelector('.load-more'),
   }  
 }
