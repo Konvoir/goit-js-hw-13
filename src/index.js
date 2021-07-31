@@ -1,10 +1,19 @@
 import './css/styles.css';
 import axios from 'axios';
-import { refs } from './js/getRefs';
+// import { refs } from './js/getRefs';
 import NewApiService from './js/service';
 import Notiflix from 'notiflix';
 import cards from './templates/cards.hbs';
 import SimpleLightbox from "simplelightbox";
+import 'simplelightbox/src/simple-lightbox.scss';
+
+
+const refs = {
+    searchForm: document.querySelector('.search-form'),
+    galleryCards: document.querySelector('.gallery'),
+    searchBtn: document.querySelector('.searchBtn'),
+    loadMoreBtn: document.querySelector('.load-more'),
+}
 
 
 const gallery = new SimpleLightbox('.photo-card a');
