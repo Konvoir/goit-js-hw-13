@@ -1,4 +1,4 @@
-export default const getRefs = () =>  {
+export const getRefs = () =>  {
     return {
     countryInfo: document.querySelector('.country-info'),
     countryList: document.querySelector('.country-list'),
